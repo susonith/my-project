@@ -1,0 +1,571 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZANDOM</title>
+    <!-- boostrap link--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--- link to css-->
+    <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+
+    <!-- HOME PAGE -->
+
+    <!-- NAVBAR HTML -->
+    <nav class="navbar">
+        <div class="container">
+        <!-- LEFT SIDE: Categories -->
+        <div class="left">
+            <a href="./women-page.html">Women</a>
+            <a href="./men-page.html">Men</a>
+            <a href="./boys-page.html">B-SHOES</a>
+            <a href="./girls-page.html">G-SHOES</a>
+        </div>
+
+        <!-- CENTER: Logo -->
+        <div class="center">
+            <a href="./index.html" class="logo">
+                <img src="./img/ZANDO-NEW-LOGO-2025.png" alt="">
+            </a>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <!-- icon -->
+        <a href="#" class="icon">
+            <i class="fa-solid fa-bell"></i>
+        </a>
+        <a href="#" class="icon">
+            <i class="fa-solid fa-heart"></i>
+        </a>
+        <a href="#" class="icon-bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count">0</span>
+        </a>
+
+        <div class="shopping-bag-panel">
+        <div class="panel-header">
+            <h2>Your Shopping Bag</h2>
+            <button class="close-panel" style="display: flex;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <button class="checkout-btn" onclick="window.location.href='women-page.html'">Shop Women</button>
+        <button class="checkout-btn" onclick="window.location.href='men-page.html'">Shop Men</button>
+        <a href="#" class="continue-shopping">Continue Shopping</a>
+    </div>
+
+        <div class="overlay"></div>
+
+        <!-- Login Links -->
+
+        <a id="Login" href="#" class="Login">LOGIN</a>
+        <a id="Register" href="#" class="Register">REGISTER</a>
+
+        <!-- LOGIN / REGISTER POPUP -->
+        <div class="popup" id="popupBox">
+            <!-- Login Form -->
+            <form id="loginForm">
+            <h2 style="font-weight: bold; text-transform: uppercase;">Login</h2>
+            <label>Mobile Number</label>
+            <input type="text" id="loginUser" placeholder="Enter phone number" required>
+            <label>Password</label>
+            <input type="password" id="loginPass" placeholder="Enter password" required>
+            <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+            <a href="#" class="btn" id="loginBtn">Login</a>
+            <div class="toggle" id="showRegister">Don't have an account? Register</div>
+            <p style="text-align: center; margin-top: 20px;">OR</p>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                <p>Continue with
+                Google</p>
+            </button>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                class="fa-brands fa-facebook"></i>
+                <p>Continue with Facebook</p>
+            </button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="hidden">
+            <h2 style="font-weight: bold; text-transform: uppercase;">Register</h2>
+            <label>Username</label>
+            <input type="text" id="regUser" placeholder="Enter Username" required>
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="Enter Email" required>
+            <label>Password</label>
+            <input type="password" id="regPass" placeholder="Enter Password" required>
+            <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+            <a href="#" class="btn" id="registerBtn">Register</a>
+            <div class="toggle" id="showLogin">Already have an account? Login</div>
+            <p style="text-align: center; margin-top: 20px;">OR</p>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                <p>Continue with
+                Google</p>
+            </button>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                class="fa-brands fa-facebook"></i>
+                <p>Continue with Facebook</p>
+            </button>
+            </form>
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay"></div>
+
+
+        </div>
+    </nav>
+
+    <!--- Detail Product -->
+    <div class="container">
+
+        <div class="product-gallery">
+        <div class="thumbnail-container">
+            <img class="thumbnail active" src="./Men detail/men d17 1.jpg" alt="Slim Fitted Long Sleeves T-Shirt">
+            <img class="thumbnail" src="./Men detail/men d17 2.jpg" alt="T-shirt thumbnail">
+            <img class="thumbnail" src="./Men detail/men d17 3.jpg" alt="T-shirt thumbnail">
+        </div>
+        <div class="main-image-wrapper">
+
+    <button class="arrow left-arrow">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <img class="main-image" src="./Men detail/men d17 1.jpg">
+
+    <button class="arrow right-arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+</div>
+        </div>
+
+        <div class="product-info">
+        <div class="price">US $25.95</div>
+<h1 class="product-title">FNOS BALACE NUMBER DOUBLE ZIP HOODIE</h1>
+
+<div class="color-options">
+    <div class="option-title">1 Colors available</div>
+    <div class="colors">
+        <div class="color-item active" data-color="white">
+            <img src="./Men detail/men d17 1.jpg" alt="White Shirt">
+            <span class="color-name">Gray</span>
+        </div>
+    </div>
+</div>
+        <div class="size-options">
+            <div class="option-title">Size</div>
+            <div class="sizes">
+            <div class="size" data-size="XS">XS</div>
+            <div class="size" data-size="S">S</div>
+            <div class="size active" data-size="M">M</div>
+            <div class="size" data-size="L">L</div>
+            <div class="size" data-size="XL">XL</div>
+            </div>
+        </div>
+
+        <div class="quantity">
+            <div class="option-title">Quantity</div>
+            <div class="qty-controls">
+            <div class="qty-btn minus">-</div>
+            <div class="qty-value">1</div>
+            <div class="qty-btn plus">+</div>
+            </div>
+        </div>
+
+        <button class="add-to-bag">Add to bag</button>
+
+        <div class="features">
+            <div class="feature">
+            <i class="fas fa-truck"></i>
+            <div class="feature-title">Fast Delivery</div>
+            <div class="feature-desc">From 1 - 3 days</div>
+            </div>
+            <div class="feature">
+            <i class="fas fa-credit-card"></i>
+            <div class="feature-title">Easy payment</div>
+            <div class="feature-desc">Many forms</div>
+            </div>
+            <div class="feature">
+            <i class="fas fa-headset"></i>
+            <div class="feature-title">Support hotline</div>
+            <div class="feature-desc">(+855) 085 330 330</div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!--- Footer Section --->
+    <footer class="footer">
+        <div class="footer-top">
+
+            <!-- ZANDO APP -->
+            <div class="footer-col">
+                <h4>ZANDO APP</h4>
+                <img class="w-70 my-3" height="120px" src="https://zandokh.com/image/catalog/logo/qr_code_app.png"
+                            alt="">
+            </div>
+
+            <!-- FOLLOW US -->
+            <div class="col-md-3 col-6 mb-3">
+            <div class="footer-col">
+                <h5>FOLLOW US</h5>
+                <div class="social-icons">
+                    <p><a href="https://www.facebook.com/share/16Mcg87PM2/"><i class="fab fa-facebook"></i></a> Facebook</p>
+                <p><a href="https://www.instagram.com/zandocambodia?igsh=MWNjbGpqc2JuZzVheQ=="><i class="fab fa-instagram"></i></a> Instagram</p>
+                <p><a href="https://vt.tiktok.com/ZSmQJ8VYs"><i class="fab fa-tiktok"></i></a> TikTok</p>
+                <p><a href="https://www.youtube.com/@zando6117"><i class="fab fa-youtube"></i></a> Youtube</p>
+                </div>
+                </div>
+        </div>
+        <!-- CUSTOMER SERVICES -->
+        <div class="footer-col">
+            <h4>CUSTOMER SERVICES</h4>
+            <p><i class="fa-regular fa-circle-question"></i> Online Exchange Policy</p>
+            <p><i class="fa-solid fa-shield"></i> Privacy Policy</p>
+            <p><i class="fa-regular fa-comments"></i> FAQs & Guides</p>
+            <p><i class="fa-solid fa-location-dot"></i> Find a store</p>
+        </div>
+
+        <!-- CONTACT US -->
+        <div class="footer-col">
+            <h4>CONTACT US</h4>
+            <p><i class="fa-regular fa-envelope"></i> customer.care@zandokh.com</p>
+            <p><i class="fa-solid fa-phone"></i> (+855) 085 330 330</p>
+            <p><i class="fab fa-telegram"></i> Telegram</p>
+        </div>
+
+    </div>
+
+        <!-- PAYMENT -->
+        <div class="footer-bottom">
+            <h4>WE ACCEPT</h4>
+            <div class="payments">
+                <img class="w-70 my-3" height="50px"
+                src="https://zandokh.com/image/catalog/logo/web-footer/We-accept-payment–for-web-footer-1.png"alt="">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Information -->
+    <section class="contact-info py-5">
+    <div class="container">
+    <div class="title-wrapper">
+</div>
+
+</div>
+    </div>
+        </div>
+            </div>
+                </div>
+                </div>
+    </section>
+
+    </body>
+    <script>
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+let currentIndex = 0;
+
+rightArrow.addEventListener('click', function(){
+    currentIndex++;
+
+    if(currentIndex >= thumbnails.length){
+        currentIndex = 0;
+    }
+
+    mainImage.src = thumbnails[currentIndex].src;
+
+    thumbnails.forEach(t => t.classList.remove('active'));
+    thumbnails[currentIndex].classList.add('active');
+});
+
+leftArrow.addEventListener('click', function(){
+    currentIndex--;
+
+    if(currentIndex < 0){
+        currentIndex = thumbnails.length - 1;
+    }
+
+    mainImage.src = thumbnails[currentIndex].src;
+
+    thumbnails.forEach(t => t.classList.remove('active'));
+    thumbnails[currentIndex].classList.add('active');
+});
+
+    document.addEventListener('DOMContentLoaded', function () {
+        /// bag shopping
+        const bagIcon = document.querySelector('.icon-bag');
+        const shoppingPanel = document.querySelector('.shopping-bag-panel');
+        const closePanel = document.querySelector('.close-panel');
+        const overlay = document.querySelector('.overlay');
+
+        //// login
+
+        // Open panel when bag icon is clicked
+        bagIcon.addEventListener('click', function () {
+        shoppingPanel.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        });
+
+        // Close panel when X button is clicked
+        closePanel.addEventListener('click', function () {
+        shoppingPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        });
+
+        // Close panel when clicking outside
+        overlay.addEventListener('click', function () {
+        shoppingPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        });
+
+        /// Open panel when clicked Login
+        const popup = document.getElementById('popupBox');
+
+        const loginLink = document.getElementById('Login');
+        const registerLink = document.getElementById('Register');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        // Show Login
+        loginLink.addEventListener('click', e => {
+        e.preventDefault();
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+        popup.classList.add('active');
+        overlay.classList.add('active');
+        });
+
+        // Show Register
+        registerLink.addEventListener('click', e => {
+        e.preventDefault();
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+        popup.classList.add('active');
+        overlay.classList.add('active');
+        });
+
+        // Close popup
+        overlay.addEventListener('click', () => {
+        popup.classList.remove('active');
+        overlay.classList.remove('active');
+        });
+
+        // Toggle forms
+        document.getElementById('showRegister').addEventListener('click', () => {
+        loginForm.classList.add('hidden');
+        registerForm.classList.remove('hidden');
+        });
+        document.getElementById('showLogin').addEventListener('click', () => {
+        registerForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        });
+
+        // Login alert
+        document.getElementById('loginBtn').addEventListener('click', e => {
+        e.preventDefault();
+        alert(`Logged in as: ${document.getElementById('loginUser').value}`);
+        });
+
+        // Register alert
+        document.getElementById('registerBtn').addEventListener('click', e => {
+        e.preventDefault();
+        alert(`Registered as: ${document.getElementById('regUser').value}`);
+        });
+
+        // Scroll animation functionality
+        let lastScrollTop = 0;
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+            rect.bottom >= 0
+        );
+        }
+
+        // Function to handle scroll animation
+        function handleScrollAnimation() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Check scroll direction
+        const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+        lastScrollTop = scrollTop;
+
+        // Animate elements based on scroll position
+        animatedElements.forEach(element => {
+            if (isInViewport(element)) {
+            element.classList.add('visible');
+            } else if (scrollDirection === 'up') {
+            // Optionally remove the visible class when scrolling up past elements
+            // element.classList.remove('visible');
+            }
+        });
+        }
+
+        // Initial check on page load
+        handleScrollAnimation();
+
+        // Listen for scroll events with throttling
+        let scrolling = false;
+        window.addEventListener('scroll', () => {
+        if (!scrolling) {
+            scrolling = true;
+            requestAnimationFrame(() => {
+            handleScrollAnimation();
+            scrolling = false;
+            });
+        }
+        });
+
+        // Additional check when resizing the window
+        window.addEventListener('resize', handleScrollAnimation);
+
+        // Thumbnail selection
+        const thumbnails = document.querySelectorAll('.thumbnail');
+const mainImage = document.querySelector('.main-image');
+
+let currentIndex = 0;
+
+thumbnails.forEach((thumb,index) => {
+thumb.addEventListener('click', function () {
+
+    currentIndex = index;
+
+    thumbnails.forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+
+    mainImage.src = this.src;
+});
+});
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+rightArrow.addEventListener('click', function(){
+
+currentIndex++;
+
+if(currentIndex >= thumbnails.length){
+currentIndex = 0;
+}
+
+mainImage.src = thumbnails[currentIndex].src;
+
+thumbnails.forEach(t => t.classList.remove('active'));
+thumbnails[currentIndex].classList.add('active');
+
+});
+
+leftArrow.addEventListener('click', function(){
+
+currentIndex--;
+
+if(currentIndex < 0){
+currentIndex = thumbnails.length - 1;
+}
+
+mainImage.src = thumbnails[currentIndex].src;
+
+thumbnails.forEach(t => t.classList.remove('active'));
+thumbnails[currentIndex].classList.add('active');
+
+});
+
+        // Color selection
+        const colors = document.querySelectorAll('.color');
+
+        colors.forEach(color => {
+        color.addEventListener('click', function () {
+            colors.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        });
+        });
+
+        // Size selection
+        const sizes = document.querySelectorAll('.size');
+
+        sizes.forEach(size => {
+        size.addEventListener('click', function () {
+            sizes.forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+        });
+        });
+
+        // Quantity controls
+        const minusBtn = document.querySelector('.minus');
+        const plusBtn = document.querySelector('.plus');
+        const qtyValue = document.querySelector('.qty-value');
+        let quantity = 1;
+
+        minusBtn.addEventListener('click', function () {
+        if (quantity > 1) {
+            quantity--;
+            qtyValue.textContent = quantity;
+        }
+        });
+
+        plusBtn.addEventListener('click', function () {
+        quantity++;
+        qtyValue.textContent = quantity;
+        });
+
+        // Add to bag functionality
+        const addToBagBtn = document.querySelector('.add-to-bag');
+        const cartCount = document.querySelector('.cart-count');
+        let count = 0;
+
+        addToBagBtn.addEventListener('click', function () {
+        count += quantity;
+        cartCount.textContent = count;
+
+        // Reset quantity after adding to cart
+        quantity = 1;
+        qtyValue.textContent = quantity;
+
+        // Show confirmation
+        addToBagBtn.textContent = 'Added to bag!';
+        setTimeout(() => {
+            addToBagBtn.textContent = 'Add to bag';
+        }, 1500);
+        });
+
+    });
+
+    </script>
+
+
+    <!---boostrap link java-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    </html>

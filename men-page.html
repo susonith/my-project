@@ -1,0 +1,1071 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZANDO - WOMEN</title>
+    <!-- boostrap link--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--- link to css-->
+    <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+    <!-- HOME PAGE -->
+
+    <!-- NAVBAR HTML -->
+    <nav class="navbar">
+        <div class="container">
+        <!-- LEFT SIDE: Categories -->
+        <div class="left">
+            <a href="./women-page.html">Women</a>
+            <a href="./men-page.html">Men</a>
+            <a href="./boys-page.html">B-SHOES</a>
+            <a href="./girls-page.html">G-SHOES</a>
+        </div>
+
+        <!-- CENTER: Logo -->
+        <div class="center">
+            <a href="./index.html" class="logo">
+            <img src="./img/ZANDO-NEW-LOGO-2025.png" alt="">
+            </a>
+        </div>
+        <!-- Search Box -->
+        <div class="search">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <!-- icon -->
+        <a href="#" class="icon">
+            <i class="fa-solid fa-bell"></i>
+        </a>
+        <a href="#" class="icon">
+            <i class="fa-solid fa-heart"></i>
+        </a>
+        <a href="#" class="icon-bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-cout">0</span>
+        </a>
+
+        <div class="shopping-bag-panel">
+        <div class="panel-header">
+            <h2>Your Shopping Bag</h2>
+            <button class="close-panel" style="display: flex;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <button class="checkout-btn" onclick="window.location.href='women-page.html'">Shop Women</button>
+        <button class="checkout-btn" onclick="window.location.href='men-page.html'">Shop Men</button>
+        <a href="#" class="continue-shopping">Continue Shopping</a>
+    </div>
+        <div class="overlay"></div>
+
+        <!-- Login Links -->
+
+        <a id="Login" href="#" class="Login">LOGIN</a>
+        <a id="Register" href="#" class="Register">REGISTER</a>
+
+        <!-- LOGIN / REGISTER POPUP -->
+        <div class="popup" id="popupBox">
+            <!-- Login Form -->
+            <form id="loginForm">
+            <h2 style="font-weight: bold; text-transform: uppercase;">Login</h2>
+            <label>Mobile Number</label>
+            <input type="text" id="loginUser" placeholder="Enter phone number" required>
+            <label>Password</label>
+            <input type="password" id="loginPass" placeholder="Enter password" required>
+            <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+            <a href="#" class="btn" id="loginBtn">Login</a>
+            <div class="toggle" id="showRegister">Don't have an account? Register</div>
+            <p style="text-align: center; margin-top: 20px;">OR</p>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                <p>Continue with
+                Google</p>
+            </button>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                class="fa-brands fa-facebook"></i>
+                <p>Continue with Facebook</p>
+            </button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="hidden">
+            <h2 style="font-weight: bold; text-transform: uppercase;">Register</h2>
+            <label>Username</label>
+            <input type="text" id="regUser" placeholder="Enter Username" required>
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="Enter Email" required>
+            <label>Password</label>
+            <input type="password" id="regPass" placeholder="Enter Password" required>
+            <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+            <a href="#" class="btn" id="registerBtn">Register</a>
+            <div class="toggle" id="showLogin">Already have an account? Login</div>
+            <p style="text-align: center; margin-top: 20px;">OR</p>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                <p>Continue with
+                Google</p>
+            </button>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                class="fa-brands fa-facebook"></i>
+                <p>Continue with Facebook</p>
+            </button>
+            </form>
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay"></div>
+
+
+        </div>
+    </nav>
+
+
+    <div class="container animate-on-scroll fade-in">
+        <img style="width: 100%; height: 100%; object-fit: cover;" src="./img/ZANDO-NEW-LOGO-2025.png" alt="">
+    </div>
+
+    <div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-1">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./Men detail/men d1 1.png" class="primary-img" alt="">
+                                <img src="./Men detail/men d1 2.png" class="secondary-img" alt="">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $21.95</div>
+                        <div class="original-price">US $31.95</div>
+                        <p class="card-text">SWEATER POLO OWLBRAND 2.0</p>
+                        <div class="swatch-container">
+                        <div class="swatch navy"></div>
+                        <div class="swatch Gray"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-2">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail1.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./Men detail/men d2 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d2 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $28.95</div>
+                        <div class="original-price">US $38.95</div>
+                        <p class="card-text">OWL DENIM PLEAT STRIPED JACKET</p>
+                        <div class="swatch-container">
+                        <div class="swatch Black"></div>
+                        <div class="swatch Blue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail2.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./Men detail/men s2 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men s2 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $22.59</div>
+                        <div class="original-price">US $32.59</div>
+                        <p class="card-text">Wide Leg Cargo Trousers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail3.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./Men detail/men d3 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d3 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $21.59</div>
+                        <div class="original-price">US $31.59</div>
+                        <p class="card-text">Sweatshirt With Zip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-1">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail4.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d4 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d4 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $26.95</div>
+                        <div class="original-price">US $41.95</div>
+                        <p class="card-text">Bomber Stripe Jacket</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-2">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail5.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d5 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d5 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $16.59</div>
+                        <div class="original-price">US $31.59</div>
+                        <p class="card-text">Striped Polo Shirt</p>
+                        <div class="swatch-container">
+                        <div class="swatch White"></div>
+                        <div class="swatch Blue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail6.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d6 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d6 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $14.59</div>
+                        <div class="original-price">US $29.59</div>
+                        <p class="card-text">Graphic T-shirt
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail7.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d7 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d7 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $15.95</div>
+                        <div class="original-price">US $30.95</div>
+                        <p class="card-text">Tailored Casual Short</p>
+                        <div class="swatch-container">
+                        <div class="swatch Black"></div>
+                        <div class="swatch Brown"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-1">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail8.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/index d8 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/index d8 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $20.59</div>
+                        <div class="original-price">US $40.59</div>
+                        <p class="card-text">Long-Sleeve shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-2">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail9.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/men d9 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d9 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $15.59</div>
+                        <div class="original-price">US $35.59</div>
+                        <p class="card-text">SLY TAPE TEE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail10.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/men d10 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d10 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $18.59</div>
+                        <div class="original-price">US $38.59</div>
+                        <p class="card-text">Regular Long Sleeves Shirt</p>
+                        <div class="swatch-container">
+                        <div class="swatch White"></div>
+                        <div class="swatch LightBlue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail11.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/men d11 1.png" class="primary-img" alt="">
+                                <img src="./Men detail/men d11 2.png" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $32.95</div>
+                        <div class="original-price">US $52.95</div>
+                        <p class="card-text">Oversized Pinstripe Shirt</p>
+                        <div class="swatch-container">
+                        <div class="swatch navy"></div>
+                        <div class="swatch Black"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-1">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail12.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d12 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d12 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $14.59</div>
+                        <div class="original-price">US $39.59</div>
+                        <p class="card-text">Loose Fitted T-Shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-2">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail13.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d13 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d13 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $21.95</div>
+                        <div class="original-price">US $46.95</div>
+                        <p class="card-text">RIPOFFF LEGACY SWEATER</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail14.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d14 2.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d14 1.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $24.59</div>
+                        <div class="original-price">US $49.59</div>
+                        <p class="card-text">RIPOFFF TRIPLE LOGO BOXY HOODIE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail15.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d15 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d15 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $16.59</div>
+                        <div class="original-price">US $41.59</div>
+                        <p class="card-text">RIPOFFF PRINT T-SHIRT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-1">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail16.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./Men detail/men d16 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d16 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $19.59</div>
+                        <div class="original-price">US $49.59</div>
+                        <p class="card-text">RIPOFFF BOXY ZIP HOODIE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-2">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail17.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./Men detail/men d17 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d17 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $25.95</div>
+                        <div class="original-price">US $55.95</div>
+                        <p class="card-text">FNOS BALACE NUMBER DOUBLE ZIP HOODIE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail18.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./Men detail/men d18 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d18 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $25.95</div>
+                        <div class="original-price">US $55.95</div>
+                        <p class="card-text">FNOS Balance Sweat Pants</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail19.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./Men detail/men d19 1.png" class="primary-img" alt="">
+                                <img src="./Men detail/men d19 2.png" class="secondary-img" alt="">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $19.59</div>
+                        <div class="original-price">US $49.59</div>
+                        <p class="card-text">Waver washed Mocha Tee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-1">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail20.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d20 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d20 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $23.59</div>
+                        <div class="original-price">US $48.59</div>
+                        <p class="card-text">Solid Sweat Pants</p>
+                        <div class="swatch-container">
+                        <div class="swatch Black"></div>
+                        <div class="swatch Gray"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail21.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d21 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d21 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $23.95</div>
+                        <div class="original-price">US $48.95</div>
+                        <p class="card-text">Sport Life Trousers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-4">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail22.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d22 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d22 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $35.59</div>
+                        <div class="original-price">US $60.59</div>
+                        <p class="card-text">Relaxed Sweatshirt</p>
+                        <div class="swatch-container">
+                        <div class="swatch LightGray"></div>
+                        <div class="swatch Black"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-2">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail23.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./Men detail/men d23 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d23 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $28.43</div>
+                        <div class="original-price">US $53.43</div>
+                        <p class="card-text">Faux Leather Jacket</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail24.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/men d24 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d24 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $16.96</div>
+                        <div class="original-price">US $36.96</div>
+                        <p class="card-text">Sisburma Racing 08 T-Shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail25.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/women d25 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/women d25 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $16.96</div>
+                        <div class="original-price">US $36.96</div>
+                        <p class="card-text">Sisburma RVST Tortoise Tee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail26.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/men d26 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d26 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $16.96</div>
+                        <div class="original-price">US $36.96</div>
+                        <p class="card-text">Sisburma Unisex RVST Tee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail27.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./Men detail/men d27 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d27 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $19.96</div>
+                        <div class="original-price">US $24.95</div>
+                        <p class="card-text">Regular Polo Shirt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5">
+    <div class="card3" style="border: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail28.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d28 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d28 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $22.13</div>
+                        <div class="original-price">US $37.13</div>
+                        <p class="card-text">Painter Denim Jeans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail29.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d29 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d29 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $23.59</div>
+                        <div class="original-price">US $38.59</div>
+                        <p class="card-text">Balance Sweat Jorts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail30.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d30 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d30 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $15.83</div>
+                        <div class="original-price">US $30.83</div>
+                        <p class="card-text">Regular Long Sleeves Shirt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate-on-scroll slide-up delay-3">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./men_detail31.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./Men detail/men d31 1.jpg" class="primary-img" alt="">
+                                <img src="./Men detail/men d31 2.jpg" class="secondary-img" alt="">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="sale-price">US $15.26</div>
+                        <div class="original-price">US $30.26</div>
+                        <p class="card-text">Loose Fitted Shirt</p>
+                        <div class="swatch-container">
+                        <div class="swatch White"></div>
+                        <div class="swatch Brown"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <hr>
+
+    <!--- Footer Section --->
+    <footer class="footer">
+        <div class="footer-top">
+
+            <!-- ZANDO APP -->
+            <div class="footer-col">
+                <h4>ZANDO APP</h4>
+                <img class="w-70 my-3" height="120px" src="https://zandokh.com/image/catalog/logo/qr_code_app.png"
+                            alt="">
+            </div>
+
+            <!-- FOLLOW US -->
+            <div class="col-md-3 col-6 mb-3">
+            <div class="footer-col">
+                <h5>FOLLOW US</h5>
+                <div class="social-icons">
+                    <p><a href="https://www.facebook.com/share/16Mcg87PM2/"><i class="fab fa-facebook"></i></a> Facebook</p>
+                <p><a href="https://www.instagram.com/zandocambodia?igsh=MWNjbGpqc2JuZzVheQ=="><i class="fab fa-instagram"></i></a> Instagram</p>
+                <p><a href="https://vt.tiktok.com/ZSmQJ8VYs"><i class="fab fa-tiktok"></i></a> TikTok</p>
+                <p><a href="https://www.youtube.com/@zando6117"><i class="fab fa-youtube"></i></a> Youtube</p>
+                </div>
+                </div>
+        </div>
+            <!-- CUSTOMER SERVICES -->
+            <div class="footer-col">
+                <h4>CUSTOMER SERVICES</h4>
+                <p><i class="fa-regular fa-circle-question"></i> Online Exchange Policy</p>
+                <p><i class="fa-solid fa-shield"></i> Privacy Policy</p>
+                <p><i class="fa-regular fa-comments"></i> FAQs & Guides</p>
+                <p><i class="fa-solid fa-location-dot"></i> Find a store</p>
+            </div>
+
+            <!-- CONTACT US -->
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+                <p><i class="fa-regular fa-envelope"></i> customer.care@zandokh.com</p>
+                <p><i class="fa-solid fa-phone"></i> (+855) 085 330 330</p>
+                <p><i class="fab fa-telegram"></i> Telegram</p>
+            </div>
+
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="footer-bottom">
+            <h4>WE ACCEPT</h4>
+            <div class="payments">
+                <img class="w-70 my-3" height="50px"
+                src="https://zandokh.com/image/catalog/logo/web-footer/We-accept-payment–for-web-footer-1.png"alt="">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Information -->
+    <section class="contact-info py-5">
+        <div class="container">
+        <div class="title-wrapper">
+        <h2 class="big-title">
+            <i class="fa-solid fa-location-dot"></i>
+            STORE LOCATION
+        </h2>
+    </div>
+
+    </div>
+    </div>
+        </div>
+            </div>
+                </div>
+                </div>
+    </section>
+
+
+    <!-- Map Section -->
+            <section class="map py-5">
+                <div class="container">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d390122.7264846962!2d104.80224697720196!3d11.556373781010378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951b42f8f154f%3A0xd96a3b813aef01f9!2sPhnom%20Penh%2C%20Cambodia!5e0!3m2!1sen!2s!4v1644346128234!5m2!1sen!2s"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+    </body>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        /// bag shopping
+        const bagIcon = document.querySelector('.icon-bag');
+        const shoppingPanel = document.querySelector('.shopping-bag-panel');
+        const closePanel = document.querySelector('.close-panel');
+        const overlay = document.querySelector('.overlay');
+
+        //// login
+
+        // Open panel when bag icon is clicked
+        bagIcon.addEventListener('click', function () {
+        shoppingPanel.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        });
+
+        // Close panel when X button is clicked
+        closePanel.addEventListener('click', function () {
+        shoppingPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        });
+
+        // Close panel when clicking outside
+        overlay.addEventListener('click', function () {
+        shoppingPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        });
+
+        /// Open panel when clicked Login
+        const popup = document.getElementById('popupBox');
+
+        const loginLink = document.getElementById('Login');
+        const registerLink = document.getElementById('Register');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        // Show Login
+        loginLink.addEventListener('click', e => {
+        e.preventDefault();
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+        popup.classList.add('active');
+        overlay.classList.add('active');
+        });
+
+        // Show Register
+        registerLink.addEventListener('click', e => {
+        e.preventDefault();
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+        popup.classList.add('active');
+        overlay.classList.add('active');
+        });
+
+        // Close popup
+        overlay.addEventListener('click', () => {
+        popup.classList.remove('active');
+        overlay.classList.remove('active');
+        });
+
+        // Toggle forms
+        document.getElementById('showRegister').addEventListener('click', () => {
+        loginForm.classList.add('hidden');
+        registerForm.classList.remove('hidden');
+        });
+        document.getElementById('showLogin').addEventListener('click', () => {
+        registerForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        });
+
+        // Login alert
+        document.getElementById('loginBtn').addEventListener('click', e => {
+        e.preventDefault();
+        alert(`Logged in as: ${document.getElementById('loginUser').value}`);
+        });
+
+        // Register alert
+        document.getElementById('registerBtn').addEventListener('click', e => {
+        e.preventDefault();
+        alert(`Registered as: ${document.getElementById('regUser').value}`);
+        });
+
+        // Scroll animation functionality
+        let lastScrollTop = 0;
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+            rect.bottom >= 0
+        );
+        }
+
+        // Function to handle scroll animation
+        function handleScrollAnimation() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Check scroll direction
+        const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+        lastScrollTop = scrollTop;
+
+        // Animate elements based on scroll position
+        animatedElements.forEach(element => {
+            if (isInViewport(element)) {
+            element.classList.add('visible');
+            } else if (scrollDirection === 'up') {
+            // Optionally remove the visible class when scrolling up past elements
+            // element.classList.remove('visible');
+            }
+        });
+        }
+
+        // Initial check on page load
+        handleScrollAnimation();
+
+        // Listen for scroll events with throttling
+        let scrolling = false;
+        window.addEventListener('scroll', () => {
+        if (!scrolling) {
+            scrolling = true;
+            requestAnimationFrame(() => {
+            handleScrollAnimation();
+            scrolling = false;
+            });
+        }
+        });
+
+        // Additional check when resizing the window
+        window.addEventListener('resize', handleScrollAnimation);
+
+
+    });
+
+    </script>
+
+
+    <!---boostrap link java-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    </html>
