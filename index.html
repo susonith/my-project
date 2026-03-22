@@ -1,0 +1,1815 @@
+
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZANDO</title>
+        <!-- boostrap link--->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!--- font awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <!--- link to css-->
+        <link rel="stylesheet" href="./style.css">
+        </head>
+
+        <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+        background-color: black;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-size: 60% 60%;
+        }
+        </style>
+
+
+        <body>
+
+        <!-- HOME PAGE -->
+
+        <!-- NAVBAR HTML -->
+        <nav class="navbar">
+            <div class="container">
+            <!-- LEFT SIDE: Categories -->
+            <div class="left">
+            <a href="./women-page.html">Women</a>
+            <a href="./men-page.html">Men</a>
+            <a href="./boys-page.html">B-SHOES</a>
+            <a href="./girls-page.html">G-SHOES</a>
+        </div>
+
+            <!-- CENTER: Logo -->
+            <div class="center">
+                <a href="./index.html" class="logo">
+                <img src="./img/ZANDO-NEW-LOGO-2025.png" alt="">
+                </a>
+            </div>
+            <!-- Search Box -->
+            <div class="search">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <!-- icon -->
+            <a href="#" class="icon">
+                <i class="fa-solid fa-bell"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="icon-bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-cout">0</span>
+            </a>
+
+            <div class="shopping-bag-panel">
+        <div class="panel-header">
+            <h2>Your Shopping Bag</h2>
+            <button class="close-panel" style="display: flex;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <button class="checkout-btn" onclick="window.location.href='women-page.html'">Shop Women</button>
+        <button class="checkout-btn" onclick="window.location.href='men-page.html'">Shop Men</button>
+        <a href="#" class="continue-shopping">Continue Shopping</a>
+    </div>
+
+            <div class="overlay"></div>
+
+            <!-- Login Links -->
+
+            <a id="Login" href="#" class="Login">LOGIN</a>
+            <a id="Register" href="#" class="Register">REGISTER</a>
+
+            <!-- LOGIN / REGISTER POPUP -->
+            <div class="popup" id="popupBox">
+                <!-- Login Form -->
+                <form id="loginForm">
+                <h2 style="font-weight: bold; text-transform: uppercase;">Login</h2>
+                <label>Mobile Number</label>
+                <input type="text" id="loginUser" placeholder="Enter phone number" required>
+                <label>Password</label>
+                <input type="password" id="loginPass" placeholder="Enter password" required>
+                <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+                <a href="#" class="btn" id="loginBtn">Login</a>
+                <div class="toggle" id="showRegister">Don't have an account? Register</div>
+                <p style="text-align: center; margin-top: 20px;">OR</p>
+                <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                    <p>Continue with
+                    Google</p>
+                </button>
+                <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                    class="fa-brands fa-facebook"></i>
+                    <p>Continue with Facebook</p>
+                </button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="hidden">
+                <h2 style="font-weight: bold; text-transform: uppercase;">Register</h2>
+                <label>Username</label>
+                <input type="text" id="regUser" placeholder="Enter Username" required>
+                <label>Email</label>
+                <input type="email" id="regEmail" placeholder="Enter Email" required>
+                <label>Password</label>
+                <input type="password" id="regPass" placeholder="Enter Password" required>
+                <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+                <a href="#" class="btn" id="registerBtn">Register</a>
+                <div class="toggle" id="showLogin">Already have an account? Login</div>
+                <p style="text-align: center; margin-top: 20px;">OR</p>
+                <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                    <p>Continue with
+                    Google</p>
+                </button>
+                <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                    class="fa-brands fa-facebook"></i>
+                    <p>Continue with Facebook</p>
+                </button>
+                </form>
+            </div>
+
+            <!-- OVERLAY -->
+            <div class="overlay" id="overlay"></div>
+
+
+            </div>
+        </nav>
+
+        <!-- slide -->
+        <div class="slide container animate-on-scroll fade-in carousel" id="mainCarousel" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/ZANDO-NEW-LOGO-2025.png" class="d-block w-100" alt="...">
+                    <div class="button-group">
+                        <button onclick="window.location.href='men-page.html'">SHOP MEN</button>
+                        <button onclick="window.location.href='women-page.html'">SHOP WOMEN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Brand Calabrate-->
+        <div class="container animate-on-scroll slide-up mt-5">
+
+        <div id="brandCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active">
+                <div class="row row-cols-6 justify-content-center">
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/ZandoBlack0(1n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/Ten11Black0(2n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/RoutineBlack0(3n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/GatoniBlack0(4n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/361Black0.(5n)jpg.jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/SisburmaBlack0(6n).jpg">
+                </div>
+
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item">
+                <div class="row row-cols-6 justify-content-center">
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/PomeloBlack0(7).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="/Logo for title/TagSpace_10(8).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/Ten11Black0(2n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/RoutineBlack0(3n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/GatoniBlack0(4n).jpg">
+                </div>
+
+                <div class="col text-center">
+                    <img style="width: 180px;" src="./Logo for title/361Black0.(5n)jpg.jpg">
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button"
+            data-bs-target="#brandCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+            data-bs-target="#brandCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+        </div>
+
+
+        <!-- 🔥 Best of the Best -->
+        <div class="container mb-5">
+        <div class="card3" style="border: none;">
+
+            <!-- HEADER -->
+            <div class="header-card d-flex justify-content-between align-items-center animate-on-scroll fade-in">
+            <h2 style="font-weight: bold; font-size: 30px;">🔥 Best of the Best</h2>
+            <p class="fw-bold mb-0">Shop More</p>
+            </div>
+
+            <!-- CAROUSEL START -->
+            <div id="carouselTumbler" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <!-- SLIDE 1 -->
+                    <div class="carousel-item active" data-bs-interval="5000">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col animate-on-scroll slide-up delay-1">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail.html">
+                    <img src="./index detail/index 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-20%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $4.79</div>
+                <div class="original-price">US $24.79</div>
+                <div class="card-text">Slash Lace Top</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up delay-2">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail1.html">
+                    <img src="./index detail/index d1 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-20%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $6.78</div>
+                <div class="original-price">US $26.78</div>
+                <div class="card-text">Oversized Long Sleeves Shirt</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up delay-3">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail2.html">
+                    <img src="./index detail/index d2 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-20%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $3.89</div>
+                <div class="original-price">US $23.89</div>
+                <div class="card-text">Cropped Fit T-Shirt</div>
+                <div class="swatch-container">
+        <div class="swatch White"></div>
+        <div class="swatch MilkWhite"></div>
+        </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up delay-4">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail3.html">
+                    <img src="./index detail/index d3 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-10%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $6.29</div>
+                <div class="original-price">US $16.29</div>
+                <div class="card-text">Loose Fit Plait Shirt</div>
+                <div class="swatch-container">
+        <div class="swatch OliveGreen"></div>
+        <div class="swatch MidBlue"></div>
+        </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+                <!-- SLIDE 2 (duplicate – change images if needed) -->
+                <div class="carousel-item" data-bs-interval="5000">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail4.html">
+                    <img src="./index detail/index d5 1.jpg" class="card-img-top">
+                </a>
+                <span class="discount-badge">-10%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $3.95</div>
+                <div class="original-price">US $13.95</div>
+                <div class="card-text">Cropped Top</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail5.html">
+                    <img src="./index detail/index d4 1.jpg" class="card-img-top">
+                </a>
+                <span class="discount-badge">-15%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $9.57</div>
+                <div class="original-price">US $24.57</div>
+                <div class="card-text">Relaxed Fitted Shirt</div>
+                <div class="swatch-container">
+        <div class="swatch White"></div>
+        <div class="swatch Black"></div>
+        </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail6.html">
+                    <img src="./index detail/index d6 1.jpg" class="card-img-top">
+                </a>
+                <span class="discount-badge">-15%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">S $5.99</div>
+                <div class="original-price">US $20.99</div>
+                <div class="card-text">Mini Skirt</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail7.html">
+                    <img src="./index detail/index d7 1.jpg" class="card-img-top">
+                </a>
+                <span class="discount-badge">-20%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $3.78</div>
+                <div class="original-price">US $23.78</div>
+                <div class="card-text">Regular Shorts With Elastic Waistband</div>
+                <div class="swatch-container">
+        <div class="swatch LightGreen"></div>
+        <div class="swatch Beige"></div>
+        </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+                <!-- SLIDE 3 -->
+                <div class="carousel-item active" data-bs-interval="5000">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col animate-on-scroll slide-up delay-1">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail8.html">
+                    <img src="./index detail/index d8 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-10%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $11.48</div>
+                <div class="original-price">US $21.48</div>
+                <div class="card-text">Loose Fitted T-Shirts</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up delay-2">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail9.html">
+                    <img src="./index detail/index d9 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-10%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $5.69</div>
+                <div class="original-price">US $15.69</div>
+                <div class="card-text">Regular Fit Wrap Shorts</div>
+                <div class="swatch-container">
+        <div class="swatch Black"></div>
+        <div class="swatch Milk White"></div>
+        </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up delay-3">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail10.html">
+                    <img src="./index detail/index d10 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-15%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $13.13</div>
+                <div class="original-price">US $28.13</div>
+                <div class="card-text">Regular Strip Polo Shirt</div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up delay-4">
+            <div class="product-card">
+                <div class="card h-100" style="border: none;">
+                <a href="index_detail11.html">
+                    <img src="./index detail/index d11 1.jpg" class="card-img-top" alt="">
+                </a>
+                <span class="discount-badge">-25%</span>
+                </div>
+                <div class="card-body">
+                <div class="sale-price">US $7.47</div>
+                <div class="original-price">US $25.47</div>
+                <div class="card-text">Regular Fit Shirt</div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+            <!-- CONTROLS -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTumbler" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTumbler" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            </div>
+            <!-- CAROUSEL END -->
+
+        </div>
+        </div>
+
+
+        <!-- Card -->
+        <div class="container row row-cols-2xl-3 mb-5 ">
+            <div class="col animate-on-scroll slide-left delay-1">
+            <div class="card">
+                <img src="./Clothes couple img/SportLife.jpg" class="card-img-top" alt="...">
+            </div>
+            </div>
+            <div class="col animate-on-scroll fade-in delay-2">
+            <div class="card">
+                <img src="./Clothes couple img/lifestify.jpg" class="card-img-top" alt="...">
+            </div>
+            </div>
+            <div class="col animate-on-scroll slide-right delay-3">
+            <div class="card">
+                <img src="./Clothes couple img/Smart Casual-1.jpg" class="card-img-top" alt="...">
+            </div>
+            </div>
+        </div>
+
+        <!--- 2 Card -->
+        <div class="container">
+            <div class="card2">
+            <div class="row row-cols-1 row-cols-2 g-3 mb-5">
+                <div class="col animate-on-scroll slide-left">
+                <div class="card">
+                    <img src="./Clothes couple img/Tops.jpg" class="card-img-top" alt="...">
+                </div>
+                </div>
+                <div class="col animate-on-scroll slide-right">
+                <div class="card">
+                    <img src="./shose img/Shoes_Sale.jpg" class="card-img-top" alt="...">
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Dominion Hoofbeat 🐎✨ -->
+        <div class="container mb-5">
+        <div class="card3" style="border: none;">
+
+            <div class="header-card d-flex animate-on-scroll fade-in">
+                <h2 style="font-weight: bold; font-size: 30px;">Dominion Hoofbeat 🐎✨</h2>
+                <p style="margin-left: 520px; font-weight: bold;">Shop More</p>
+            </div>
+
+            <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                            <div class="col animate-on-scroll slide-up delay-1">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail12.html">
+                                            <img src="./index detail/index 12 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                    <div class="sale-price">US $11.86</div>
+                                    <div class="original-price">US $31.86</div>
+                                    <div class="card-text">Slim Fit T-Shirt</div>
+                                    <div class="swatch-container">
+        <div class="swatch White"></div>
+        <div class="swatch Black"></div>
+        <div class="swatch Brown"></div>
+        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-2">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail13.html">
+                                            <img src="./index detail/index 13 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $17.59</div>
+                <div class="original-price">US $37.59</div>
+                <div class="card-text">Floral Relaxed Shirt</div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-3">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail14.html">
+                                            <img src="./index detail/index d14 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $17.59</div>
+                <div class="original-price">US $42.59</div>
+                <div class="card-text">Relaxed Short Sleeves Shirt</div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-4">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail15.html">
+                                            <img src="./index detail/index d15 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $20.59</div>
+                <div class="original-price">US $45.59</div>
+                <div class="card-text">Striped Short Sleeve Shirt</div>
+                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                            <div class="col animate-on-scroll slide-up delay-1">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail16.html">
+                                            <img src="./index detail/index d16 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $23.59</div>
+                <div class="original-price">US $48.59</div>
+                <div class="card-text">Lace Midi Dress</div>
+                <div class="swatch-container">
+        <div class="swatch Black"></div>
+        <div class="swatch White"></div>
+        </div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-2">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail17.html">
+                                            <img src="./index detail/index d17 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $25.95</div>
+                <div class="original-price">US $35.95</div>
+                <div class="card-text">Regular Fitted Jacket</div>
+                <div class="swatch-container">
+        <div class="swatch Beige"></div>
+        <div class="swatch Navy"></div>
+        </div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-3">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail18.html">
+                                            <img src="./index detail/index d18 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $17.63</div>
+                <div class="original-price">US $27.63</div>
+                <div class="card-text">Relaxed Fitted Trousers</div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-4">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail19.html">
+                                            <img src="./index detail/index d19 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $19.59</div>
+                <div class="original-price">US $34.59</div>
+                <div class="card-text">Regular Fitted Trousers</div>
+                <div class="swatch-container">
+        <div class="swatch Beige"></div>
+        <div class="swatch Black"></div>
+        </div>
+                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                            <div class="col animate-on-scroll slide-up delay-1">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail20.html">
+                                            <img src="./index detail/index d 20 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $8.80</div>
+                <div class="original-price">US $23.80</div>
+                <div class="card-text">Bubble Midi Skirt</div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-2">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail21.html">
+                                            <img src="./index detail/index d21 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $7.30</div>
+                <div class="original-price">US $32.30</div>
+                <div class="card-text">Regular T-Shirts</div>
+                <div class="swatch-container">
+        <div class="swatch LightGreen"></div>
+        <div class="swatch Navy"></div>
+        </div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-3">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail22.html">
+                                            <img src="./index detail/index d22 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $5.99</div>
+                <div class="original-price">US $30.99</div>
+                <div class="card-text">Relaxed Texture Shirt</div>
+                <div class="swatch-container">
+        <div class="swatch Beige"></div>
+        <div class="swatch Black"></div>
+        </div>
+                </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-4">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail23.html">
+                                            <img src="./index detail/index d23 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                <div class="sale-price">US $8.28</div>
+                <div class="original-price">US $28.28</div>
+                <div class="card-text">Wide Leg Cargo Trousers</div>
+                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+            </div>
+    </div>
+
+
+        <!--- ⭐ Customer Favorite Tumbler --->
+        <div class="container mb-5">
+        <div class="card3" style="border: none;">
+
+            <!-- HEADER -->
+            <div class="header-card d-flex justify-content-between align-items-center animate-on-scroll fade-in">
+            <h2 style="font-weight: bold; font-size: 30px;">⭐ Customer Favorite Tumbler</h2>
+            <p class="fw-bold mb-0">Shop More</p>
+            </div>
+
+            <!-- CAROUSEL START -->
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <!-- SLIDE 1 -->
+                <div class="carousel-item active" data-bs-interval="5000">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                    <div class="col animate-on-scroll slide-up delay-1">
+                    <div class="product-card">
+                <span class="discount-badge">-30%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/ZANDO tumbler 04-cr-450x672(1).jpg" class="card-img-top">
+                        <span class="discount-badge">-30%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $9.95</div>
+                        <div class="original-price">US $39.95</div>
+                        <div class="card-text">ZANDO Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col animate-on-scroll slide-up delay-2">
+                    <div class="product-card">
+                <span class="discount-badge">-30%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/ZANDO tumbler 01 (2)-cr-450x672(2).jpg" class="card-img-top">
+                        <span class="discount-badge">-30%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $7.95</div>
+                        <div class="original-price">US $37.59</div>
+                        <div class="card-text">ZANDO Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col animate-on-scroll slide-up delay-3">
+                    <div class="product-card">
+                <span class="discount-badge">-20%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/1-cr-450x672(3).jpg" class="card-img-top">
+                        <span class="discount-badge">-20%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $8.59</div>
+                        <div class="original-price">US $28.59</div>
+                        <div class="card-text">TEN11 Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col animate-on-scroll slide-up delay-4">
+                    <div class="product-card">
+                <span class="discount-badge">-20%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/Main-cr-450x672(4).jpg" class="card-img-top">
+                        <span class="discount-badge">-20%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $6.59</div>
+                        <div class="original-price">US $26.59</div>
+                        <div class="card-text">TEN11 Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+
+                <!-- SLIDE 2 (duplicate structure, change images if needed) -->
+                <div class="carousel-item" data-bs-interval="5000">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                    <div class="col">
+                    <div class="product-card">
+                <span class="discount-badge">-30%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/ZANDO tumbler 04-cr-450x672(1).jpg" class="card-img-top">
+                        <span class="discount-badge">-30%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $9.95</div>
+                        <div class="original-price">US $39.95</div>
+                        <div class="card-text">ZANDO Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col">
+                    <div class="card h-100" style="border: none;">
+                        <div class="product-card">
+                <span class="discount-badge">-30%</span>
+                        <img src="./Tumbler img/ZANDO tumbler 01 (2)-cr-450x672(2).jpg" class="card-img-top">
+                        <span class="discount-badge">-30%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $7.95</div>
+                        <div class="original-price">US $37.95</div>
+                        <div class="card-text">ZANDO Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col">
+                    <div class="product-card">
+                <span class="discount-badge">-20%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/1-cr-450x672(3).jpg" class="card-img-top">
+                        <span class="discount-badge">-20%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $8.59</div>
+                        <div class="original-price">US $28.59</div>
+                        <div class="card-text">TEN11 Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col">
+                    <div class="product-card">
+                <span class="discount-badge">-20%</span>
+                    <div class="card h-100" style="border: none;">
+                        <img src="./Tumbler img/Main-cr-450x672(4).jpg" class="card-img-top">
+                        <span class="discount-badge">-20%</span>
+                        </div>
+                        <div class="card-body">
+                        <div class="sale-price">US $6.59</div>
+                        <div class="original-price">US $26.59</div>
+                        <div class="card-text">TEN11 Tumbler</div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+
+            </div>
+
+            <!-- CONTROLS -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            </div>
+            <!-- CAROUSEL END -->
+
+        </div>
+        </div>
+
+
+        <!--- 🔥 Deals Starting from 50% OFF! --->
+        <div class="container mb-5">
+        <div class="card3" style="border: none;">
+
+            <div class="header-card d-flex animate-on-scroll fade-in">
+                <h2 style="font-weight: bold; font-size: 30px;">🔥 Deals Starting from 50% OFF!</h2>
+                <p style="margin-left: 590px; font-weight: bold;">Shop More</p>
+            </div>
+
+            <div id="carouselDeals" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDeals" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselDeals" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselDeals" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                            <div class="col animate-on-scroll slide-up delay-1">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail24.html">
+                                            <img src="./index detail/index d24 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $9.44</div>
+                                        <div class="original-price">US $29.44</div>
+                                        <div class="card-text">Loose Fitted Tank Top</div>
+                                        <div class="swatch-container">
+                                            <div class="swatch Black"></div>
+                                            <div class="swatch White"></div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-2">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail25.html">
+                                            <img src="./index detail/index d25 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $9.53</div>
+                                        <div class="original-price">US $29.53</div>
+                                        <div class="card-text">Off-Shoulder Top</div>
+                                    <div class="swatch-container">
+                                        <div class="swatch Beige"></div>
+                                        <div class="swatch White"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-3">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail26.html">
+                                            <img src="./index detail/index d26 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $8.18</div>
+                                        <div class="original-price">US $23.18</div>
+                                        <div class="card-text">Double Take T-Shirt</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-4">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail27.html">
+                                            <img src="./index detail/index d27 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $6.98</div>
+                                        <div class="original-price">US $21.98</div>
+                                        <div class="card-text">Mini Skirt</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail28.html">
+                                            <img src="./index detail/index d28 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $5.58</div>
+                                        <div class="original-price">US $20.58</div>
+                                        <div class="card-text">Loose Fit Demin Shorts</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail29.html">
+                                            <img src="./index detail/index d29 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $8.48</div>
+                                        <div class="original-price">US $33.48</div>
+                                        <div class="card-text">Loose Demim Jorts</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail30.html">
+                                            <img src="./index detail/index d30 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-25%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $9.29</div>
+                                        <div class="original-price">US $18.59</div>
+                                        <div class="card-text">Loose Denim Jorts</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail31html">
+                                            <img src="./index detail/index d31 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $9.86</div>
+                                        <div class="original-price">US $19.86</div>
+                                        <div class="card-text">Front Placket Top</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail32.html">
+                                            <img src="./index detail/index d32 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $7.47</div>
+                                        <div class="original-price">US $17.47</div>
+                                        <div class="card-text">Regular Stripe Shirt</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail33.html">
+                                            <img src="./index detail/index d33 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $8.76</div>
+                                        <div class="original-price">US $18.76</div>
+                                        <div class="card-text">Ribbed Knitted Top</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch Red"></div>
+                                        <div class="swatch Beige"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail34.html">
+                                            <img src="./index detail/index d34 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $9.51</div>
+                                        <div class="original-price">US $19.51</div>
+                                        <div class="card-text">Loose Fitted T-Shirt</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail35.html">
+                                            <img src="./index detail/index d35 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $7.30</div>
+                                        <div class="original-price">US $22.30</div>
+                                        <div class="card-text">Mesh Jersey T-Shirt With Printed</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDeals" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDeals" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+            </div>
+    </div>
+
+
+        <!--- 👟 Hot Footwear Deals! --->
+        <div class="container mb-5">
+        <div class="card3" style="border: none;">
+
+            <div class="header-card d-flex justify-content-between align-items-center animate-on-scroll fade-in">
+                <h2 style="font-weight: bold; font-size: 30px;">👟 Hot Footwear Deals!</h2>
+                <p class="fw-bold mb-0" style="cursor: pointer;">Shop More</p>
+            </div>
+
+            <div id="carouselFootwear" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                            <div class="col animate-on-scroll slide-up delay-1">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail36.html">
+                                            <img src="./index detail/index d36 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $38.75</div>
+                                        <div class="original-price">US $53.75</div>
+                                        <div class="card-text">Lifestyle Sneakers</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-2">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail37.html">
+                                            <img src="./index detail/index d37 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $30.36</div>
+                                        <div class="original-price">US $50.36</div>
+                                        <div class="card-text">Perform Running Sneakers</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch LightPink"></div>
+                                        <div class="swatch Black"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-3">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail38.html">
+                                            <img src="./index detail/index d38 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-30%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $10.47</div>
+                                        <div class="original-price">US $40.47</div>
+                                        <div class="card-text">Sandals</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col animate-on-scroll slide-up delay-4">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail39.html">
+                                            <img src="./index detail/index d 39 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $17.96</div>
+                                        <div class="original-price">US $27.96</div>
+                                        <div class="card-text">Retro Culture Sneakers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail40.html">
+                                            <img src="./index detail/index d40 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $34.36</div>
+                                        <div class="original-price">US $54.36</div>
+                                        <div class="card-text">Casual Sneakers</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch LightGray"></div>
+                                        <div class="swatch Brown"></div>
+                                        <div class="swatch Red"></div>
+                                        <div class="swatch Black"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail41.html">
+                                            <img src="./index detail/index d41 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $47.95</div>
+                                        <div class="original-price">US $57.95</div>
+                                        <div class="card-text">Streetwear Shoes</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail42.html">
+                                            <img src="./index detail/index d42 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $19.76</div>
+                                        <div class="original-price">US $29.76</div>
+                                        <div class="card-text">Sandals</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail43.html">
+                                            <img src="./index detail/index d43 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $15.26</div>
+                                        <div class="original-price">US $25.26</div>
+                                        <div class="card-text">Sandals</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch Black"></div>
+                                        <div class="swatch Brown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail44.html">
+                                            <img src="./index detail/index d44 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $50.59</div>
+                                        <div class="original-price">US $60.59</div>
+                                        <div class="card-text">Running Sneaker</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail45.html">
+                                            <img src="./index detail/index d45 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $41.59</div>
+                                        <div class="original-price">US $61.59</div>
+                                        <div class="card-text">Lightweight Running Sneakers</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail46.html">
+                                            <img src="./index detail/index d46 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $56.59</div>
+                                        <div class="original-price">US $66.59</div>
+                                        <div class="card-text">Lifestyle Sneakers</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail47.html">
+                                            <img src="./index detail/index d47 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-50%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $16.08</div>
+                                        <div class="original-price">US $56.08</div>
+                                        <div class="card-text">Lifestyle Sneakers</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch Beige"></div>
+                                        <div class="swatch Black"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail48.html">
+                                            <img src="./index detail/index d48 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-10%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $39.98</div>
+                                        <div class="original-price">US $49.98</div>
+                                        <div class="card-text">Running Sneaker</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail49.html">
+                                            <img src="./index detail/index d49 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-50%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $5.95</div>
+                                        <div class="original-price">US $55.95</div>
+                                        <div class="card-text">Sandals</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch Blue"></div>
+                                        <div class="swatch Beige"></div>
+                                        <div class="swatch LightGreen"></div>
+                                        <div class="swatch Black"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail50.html">
+                                            <img src="./index detail/index d50 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-20%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $31.95</div>
+                                        <div class="original-price">US $51.95</div>
+                                        <div class="card-text">Perform Running Sneakers</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="card h-100" style="border: none;">
+                                        <a href="index_detail51.html">
+                                            <img src="./index detail/index d51 1.jpg" class="card-img-top">
+                                        </a>
+                                        <span class="discount-badge">-15%</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="sale-price">US $47.25</div>
+                                        <div class="original-price">US $62.25</div>
+                                        <div class="card-text">Retro Culture Sneakers</div>
+                                        <div class="swatch-container">
+                                        <div class="swatch Orange"></div>
+                                        <div class="swatch Red"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFootwear" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselFootwear" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+            </div>
+    </div>
+
+        <hr>
+
+        <!--- Footer Section --->
+        <footer class="footer">
+            <div class="footer-top">
+
+                <!-- ZANDO APP -->
+                <div class="footer-col">
+                    <h4>ZANDO APP</h4>
+                    <img class="w-70 my-3" height="120px" src="https://zandokh.com/image/catalog/logo/qr_code_app.png"alt="">
+                </div>
+
+                <div class="col-md-3 col-6 mb-3">
+                <div class="footer-col">
+                    <h5>FOLLOW US</h5>
+                    <div class="social-icons">
+                        <p><a href="https://www.facebook.com/share/17fnfkFeTu/"><i class="fab fa-facebook"></i></a> Facebook</p>
+                        <p><a href="https://www.instagram.com/ranit.su.180?igsh=NnV5NG85bG02cDRm"><i class="fab fa-instagram"></i></a> Instagram</p>
+                        <p><a href="https://www.tiktok.com/@so.nith._?_r=1&_t=ZS-936CNiDRsvZ"><i class="fab fa-tiktok"></i></a> TikTok</p>
+                        <p><a href="https://www.youtube.com/@XhhG-z2r"><i class="fab fa-youtube"></i></a> Youtube</p>
+                    </div>
+                    </div>
+        </div>
+                <!-- CUSTOMER SERVICES -->
+                <div class="footer-col">
+                    <h4>CUSTOMER SERVICES</h4>
+                    <p><i class="fa-regular fa-circle-question"></i> Online Exchange Policy</p>
+                    <p><i class="fa-solid fa-shield"></i> Privacy Policy</p>
+                    <p><i class="fa-regular fa-comments"></i> FAQs & Guides</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Find a store</p>
+                </div>
+
+                <!-- CONTACT US -->
+                <div class="footer-col">
+                    <h4>CONTACT US</h4>
+                    <p><i class="fa-regular fa-envelope"></i> customer.care@zandokh.com</p>
+                    <p><i class="fa-solid fa-phone"></i> (+855) 085 330 330</p>
+                    <p><i class="fab fa-telegram"></i> Telegram</p>
+                </div>
+
+            </div>
+
+            <!-- PAYMENT -->
+            <div class="footer-bottom">
+                <h4>WE ACCEPT</h4>
+                <div class="payments">
+                    <img class="w-500 my-3" height="500px"
+                    src="https://zandokh.com/image/catalog/logo/web-footer/We-accept-payment–for-web-footer-1.png"alt="">
+                </div>
+            </div>
+        </footer>
+
+        <!-- Contact Information -->
+        <section class="contact-info py-5">
+            <div class="container">
+            <div class="title-wrapper">
+            <h2 class="big-title">
+                <i class="fa-solid fa-location-dot"></i>
+                STORE LOCATION
+            </h2>
+        </div>
+
+        </div>
+        </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+
+        <!-- Map Section -->
+                <section class="map py-5">
+                    <div class="container">
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d390122.7264846962!2d104.80224697720196!3d11.556373781010378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951b42f8f154f%3A0xd96a3b813aef01f9!2sPhnom%20Penh%2C%20Cambodia!5e0!3m2!1sen!2s!4v1644346128234!5m2!1sen!2s"
+                                allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+
+
+
+        </body>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            /// bag shopping
+            const bagIcon = document.querySelector('.icon-bag');
+            const shoppingPanel = document.querySelector('.shopping-bag-panel');
+            const closePanel = document.querySelector('.close-panel');
+            const overlay = document.querySelector('.overlay');
+
+            //// login
+
+            // Open panel when bag icon is clicked
+            bagIcon.addEventListener('click', function () {
+            shoppingPanel.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            });
+
+            // Close panel when X button is clicked
+            closePanel.addEventListener('click', function () {
+            shoppingPanel.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            });
+
+            // Close panel when clicking outside
+            overlay.addEventListener('click', function () {
+            shoppingPanel.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            });
+
+            /// Open panel when clicked Login
+            const popup = document.getElementById('popupBox');
+
+            const loginLink = document.getElementById('Login');
+            const registerLink = document.getElementById('Register');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            // Show Login
+            loginLink.addEventListener('click', e => {
+            e.preventDefault();
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+            popup.classList.add('active');
+            overlay.classList.add('active');
+            });
+
+            // Show Register
+            registerLink.addEventListener('click', e => {
+            e.preventDefault();
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+            popup.classList.add('active');
+            overlay.classList.add('active');
+            });
+
+            // Close popup
+            overlay.addEventListener('click', () => {
+            popup.classList.remove('active');
+            overlay.classList.remove('active');
+            });
+
+            // Toggle forms
+            document.getElementById('showRegister').addEventListener('click', () => {
+            loginForm.classList.add('hidden');
+            registerForm.classList.remove('hidden');
+            });
+            document.getElementById('showLogin').addEventListener('click', () => {
+            registerForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+            });
+
+            // Login alert
+            document.getElementById('loginBtn').addEventListener('click', e => {
+            e.preventDefault();
+            alert(`Logged in as: ${document.getElementById('loginUser').value}`);
+            });
+
+            // Register alert
+            document.getElementById('registerBtn').addEventListener('click', e => {
+            e.preventDefault();
+            alert(`Registered as: ${document.getElementById('regUser').value}`);
+            });
+
+            // Scroll animation functionality
+            let lastScrollTop = 0;
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            // Function to check if element is in viewport
+            function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+                rect.bottom >= 0
+            );
+            }
+
+            // Function to handle scroll animation
+            function handleScrollAnimation() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Check scroll direction
+            const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+            lastScrollTop = scrollTop;
+
+            // Animate elements based on scroll position
+            animatedElements.forEach(element => {
+                if (isInViewport(element)) {
+                element.classList.add('visible');
+                } else if (scrollDirection === 'up') {
+                // Optionally remove the visible class when scrolling up past elements
+                // element.classList.remove('visible');
+                }
+            });
+            }
+
+            // Initial check on page load
+            handleScrollAnimation();
+
+            // Listen for scroll events with throttling
+            let scrolling = false;
+            window.addEventListener('scroll', () => {
+            if (!scrolling) {
+                scrolling = true;
+                requestAnimationFrame(() => {
+                handleScrollAnimation();
+                scrolling = false;
+                });
+            }
+            });
+
+            // Additional check when resizing the window
+            window.addEventListener('resize', handleScrollAnimation);
+
+            // Scroll animation
+            document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".animate-on-scroll");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+                });
+            }, { threshold: 0.2 });
+
+            elements.forEach(el => observer.observe(el));
+            });
+
+
+        });
+
+        </script>
+
+
+        <!---boostrap link java-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+        </html>
