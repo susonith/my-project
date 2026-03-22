@@ -1,0 +1,1050 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZANDO - WOMEN</title>
+    <!-- boostrap link--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--- link to css-->
+    <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+    <!-- HOME PAGE -->
+
+    <!-- NAVBAR HTML -->
+    <nav class="navbar">
+        <div class="container">
+        <!-- LEFT SIDE: Categories -->
+        <div class="left">
+            <a href="./women-page.html">Women</a>
+            <a href="./men-page.html">Men</a>
+            <a href="./boys-page.html">B-Shoes</a>
+            <a href="./girls-page.html">G-Shoes</a>
+        </div>
+
+        <!-- CENTER: Logo -->
+        <div class="center">
+            <a href="./index.html" class="logo">
+            <img src="./img/ZANDO-NEW-LOGO-2025.png" alt="">
+            </a>
+        </div>
+        <!-- Search Box -->
+        <div class="search">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <!-- icon -->
+        <a href="#" class="icon">
+            <i class="fa-solid fa-bell"></i>
+        </a>
+        <a href="#" class="icon">
+            <i class="fa-solid fa-heart"></i>
+        </a>
+        <a href="#" class="icon-bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-cout">0</span>
+        </a>
+
+        <div class="shopping-bag-panel">
+        <div class="panel-header">
+            <h2>Your Shopping Bag</h2>
+            <button class="close-panel" style="display: flex;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <button class="checkout-btn" onclick="window.location.href='women-page.html'">Shop Women</button>
+        <button class="checkout-btn" onclick="window.location.href='men-page.html'">Shop Men</button>
+        <a href="#" class="continue-shopping">Continue Shopping</a>
+    </div>
+
+        <div class="overlay"></div>
+
+        <!-- Login Links -->
+
+        <a id="Login" href="#" class="Login">LOGIN</a>
+        <a id="Register" href="#" class="Register">REGISTER</a>
+
+        <!-- LOGIN / REGISTER POPUP -->
+        <div class="popup" id="popupBox">
+            <!-- Login Form -->
+            <form id="loginForm">
+            <h2 style="font-weight: bold; text-transform: uppercase;">Login</h2>
+            <label>Mobile Number</label>
+            <input type="text" id="loginUser" placeholder="Enter phone number" required>
+            <label>Password</label>
+            <input type="password" id="loginPass" placeholder="Enter password" required>
+            <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+            <a href="#" class="btn" id="loginBtn">Login</a>
+            <div class="toggle" id="showRegister">Don't have an account? Register</div>
+            <p style="text-align: center; margin-top: 20px;">OR</p>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                <p>Continue with
+                Google</p>
+            </button>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                class="fa-brands fa-facebook"></i>
+                <p>Continue with Facebook</p>
+            </button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="hidden">
+            <h2 style="font-weight: bold; text-transform: uppercase;">Register</h2>
+            <label>Username</label>
+            <input type="text" id="regUser" placeholder="Enter Username" required>
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="Enter Email" required>
+            <label>Password</label>
+            <input type="password" id="regPass" placeholder="Enter Password" required>
+            <label style="font-size: 12px; text-align: right;">Forgot Your Password?</label>
+            <a href="#" class="btn" id="registerBtn">Register</a>
+            <div class="toggle" id="showLogin">Already have an account? Login</div>
+            <p style="text-align: center; margin-top: 20px;">OR</p>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px;"><i class="fa-brands fa-google"></i>
+                <p>Continue with
+                Google</p>
+            </button>
+            <button class="button-fb-google" style="height: 45px; border-radius: 5px; margin-top: 10px;"><i
+                class="fa-brands fa-facebook"></i>
+                <p>Continue with Facebook</p>
+            </button>
+            </form>
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay"></div>
+
+
+        </div>
+    </nav>
+
+
+    <div class="container animate-on-scroll fade-in">
+        <img style="width: 100%; height: 100%; object-fit: cover;" src="./img/ZANDO-NEW-LOGO-2025.png" alt="">
+    </div>
+
+    <div class="container mb-5 mt-5">
+        <div class="card3" style="border: none;">
+        <div class="header-card d-flex animate-on-scroll fade-in">
+
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./girl detail/g d1 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d1 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $24.21</div>
+                        <div class="original-price">US $34.21</div>
+                        <p class="card-text">Open Toe Sandals</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail2.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./girl detail/g d2 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d2 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $11.95</div>
+                        <div class="original-price">US $21.95</div>
+                        <p class="card-text">BIG 3 Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail3.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./girl detail/g d3 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d3 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $15.95</div>
+                        <div class="original-price">US $25.95</div>
+                        <p class="card-text">Basketball Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail4.html">
+                                <span class="discount-badge">-10%</span>
+                                <img src="./girl detail/g d4 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d4 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-10%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $24.95</div>
+                        <div class="original-price">US $34.95</div>
+                        <p class="card-text">Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail5.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d5 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d5 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $11.95</div>
+                        <div class="original-price">US $26.95</div>
+                        <p class="card-text">BIG 3 Running Sneakers</p>
+                        <div class="swatch-container">
+                            <div class="swatch Red"></div>
+                            <div class="swatch LightGreen"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail6.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d6 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d6 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $9.95</div>
+                        <div class="original-price">US $24.95</div>
+                        <p class="card-text">Casual Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail7.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d7 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d7 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $9.95</div>
+                        <div class="original-price">US $24.95</div>
+                        <p class="card-text">Sandals</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail8.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d8 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d8 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $11.95</div>
+                        <div class="original-price">US $26.95</div>
+                        <p class="card-text">River Trekking Sneakers</p>
+                        <div class="swatch-container">
+                            <div class="swatch LightGreen"></div>
+                            <div class="swatch Blue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail9.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d9 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d9 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $26.98</div>
+                        <div class="original-price">US $46.98</div>
+                        <p class="card-text">Basketball Sport Life Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail10.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d10 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d10 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $21.41</div>
+                        <div class="original-price">US $41.41</div>
+                        <p class="card-text">Skateboarding Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail11.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d11 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d11 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $24.35</div>
+                        <div class="original-price">US $44.35</div>
+                        <p class="card-text">Trail Sneakers</p>
+                        <div class="swatch-container">
+                            <div class="swatch White"></div>
+                            <div class="swatch LightGreen "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail12.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d12 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d12 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $26.00</div>
+                        <div class="original-price">US $46.00</div>
+                        <p class="card-text">Casual Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail13.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d13 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d13 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $28.55</div>
+                        <div class="original-price">US $53.55</div>
+                        <p class="card-text">Lifestyle Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail14.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d14 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d14 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $20.90</div>
+                        <div class="original-price">US $45.90</div>
+                        <p class="card-text">Running Sneakers</p>
+                        <div class="swatch-container">
+                            <div class="swatch Blue"></div>
+                            <div class="swatch Black "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail15.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d15 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d15 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $22.91</div>
+                        <div class="original-price">US $47.91</div>
+                        <p class="card-text">Lifestyle Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail16.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d16 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d16 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $16.07</div>
+                        <div class="original-price">US $41.07</div>
+                        <p class="card-text">Big 3 Slippers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail17.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./girl detail/g d17 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d17 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $24.47</div>
+                        <div class="original-price">US $54.47</div>
+                        <p class="card-text">Skateboarding Sneakers</p>
+                        <div class="swatch-container">
+                            <div class="swatch Black"></div>
+                            <div class="swatch Brown "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail18.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./girl detail/g d18 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d18 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $9.95</div>
+                        <div class="original-price">US $54.47</div>
+                        <p class="card-text">Casual Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail19.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./girl detail/g d19 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d19 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $11.95</div>
+                        <div class="original-price">US $41.95</div>
+                        <p class="card-text">Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail20.html">
+                                <span class="discount-badge">-30%</span>
+                                <img src="./girl detail/g d20 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d20 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-30%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $53.17</div>
+                        <div class="original-price">US $83.17</div>
+                        <p class="card-text">Performance Basketball Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail21.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d21 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d21 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $53.17</div>
+                        <div class="original-price">US $78.17</div>
+                        <p class="card-text">Cushion Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail22.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d22 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d22 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $34.01</div>
+                        <div class="original-price">US $59.01</div>
+                        <p class="card-text">Multifunctional Outdoor</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail23.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d23 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d23 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $30.07</div>
+                        <div class="original-price">US $55.07</div>
+                        <p class="card-text">Double Strap Ballet Flats</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail24.html">
+                                <span class="discount-badge">-25%</span>
+                                <img src="./girl detail/g d24 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d24 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-25%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $19.95</div>
+                        <div class="original-price">US $44.95</div>
+                        <p class="card-text">Big3-Sport Life Hold Sandals</p>
+                        <div class="swatch-container">
+                            <div class="swatch Multicolor"></div>
+                            <div class="swatch White"></div>
+                            <div class="swatch Brown "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail25.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d25 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d25 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $22.77</div>
+                        <div class="original-price">US $42.77</div>
+                        <p class="card-text">Retro Culture Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail26.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d26 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d26 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $22.77</div>
+                        <div class="original-price">US $42.16</div>
+                        <p class="card-text">Skateboarding Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./girls_detail27.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d27 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d27 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $14.95</div>
+                        <div class="original-price">US $24.95</div>
+                        <p class="card-text">AG-Slippers</p>
+                        <div class="swatch-container">
+                            <div class="swatch White"></div>
+                            <div class="swatch Brown "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail28.html">
+                                <span class="discount-badge">-20%</span>
+                                <img src="./girl detail/g d28 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d28 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-20%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $106.75</div>
+                        <div class="original-price">US $126.75</div>
+                        <p class="card-text">Trail Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail29.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d29 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d29 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $30.98</div>
+                        <div class="original-price">US $45.98</div>
+                        <p class="card-text">Perform Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail30.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d30 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d30 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $25.30</div>
+                        <div class="original-price">US $29.95</div>
+                        <p class="card-text">Skateboarding Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail31.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d31 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d31 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $35.41</div>
+                        <div class="original-price">US $50.41</div>
+                        <p class="card-text">Cushion Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col animate-on-scroll slide-up">
+                <div class="card h-100" style="border: none;">
+                    <div class="image-container">
+                        <div class="product-card">
+                            <a href="./boys_detail32.html">
+                                <span class="discount-badge">-15%</span>
+                                <img src="./girl detail/g d32 1.jpg" class="primary-img">
+                                <img src="./girl detail/g d32 2.jpg" class="secondary-img">
+                                <span class="discount-badge">-15%</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="sale-price">US $136.50</div>
+                        <div class="original-price">US $151.50</div>
+                        <p class="card-text">Racing Running Sneakers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <hr>
+
+    <!--- Footer Section --->
+    <footer class="footer">
+        <div class="footer-top">
+
+            <!-- ZANDO APP -->
+            <div class="footer-col">
+                <h4>ZANDO APP</h4>
+                <img class="w-70 my-3" height="120px" src="https://zandokh.com/image/catalog/logo/qr_code_app.png"
+                            alt="">
+            </div>
+
+            <!-- FOLLOW US -->
+            <div class="col-md-3 col-6 mb-3">
+            <div class="footer-col">
+                <h5>FOLLOW US</h5>
+                <div class="social-icons">
+                <p><a href="https://www.facebook.com/share/16Mcg87PM2/"><i class="fab fa-facebook"></i></a> Facebook</p>
+                <p><a href="https://www.instagram.com/zandocambodia?igsh=MWNjbGpqc2JuZzVheQ=="><i class="fab fa-instagram"></i></a> Instagram</p>
+                <p><a href="https://vt.tiktok.com/ZSmQJ8VYs"><i class="fab fa-tiktok"></i></a> TikTok</p>
+                <p><a href="https://www.youtube.com/@zando6117"><i class="fab fa-youtube"></i></a> Youtube</p>
+                </div>
+                </div>
+        </div>
+            <!-- CUSTOMER SERVICES -->
+            <div class="footer-col">
+                <h4>CUSTOMER SERVICES</h4>
+                <p><i class="fa-regular fa-circle-question"></i> Online Exchange Policy</p>
+                <p><i class="fa-solid fa-shield"></i> Privacy Policy</p>
+                <p><i class="fa-regular fa-comments"></i> FAQs & Guides</p>
+                <p><i class="fa-solid fa-location-dot"></i> Find a store</p>
+            </div>
+
+            <!-- CONTACT US -->
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+                <p><i class="fa-regular fa-envelope"></i> customer.care@zandokh.com</p>
+                <p><i class="fa-solid fa-phone"></i> (+855) 085 330 330</p>
+                <p><i class="fab fa-telegram"></i> Telegram</p>
+            </div>
+
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="footer-bottom">
+            <h4>WE ACCEPT</h4>
+            <div class="payments">
+                <img class="w-70 my-3" height="50px"
+                src="https://zandokh.com/image/catalog/logo/web-footer/We-accept-payment–for-web-footer-1.png"alt="">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Information -->
+    <section class="contact-info py-5">
+        <div class="container">
+        <div class="title-wrapper">
+        <h2 class="big-title">
+            <i class="fa-solid fa-location-dot"></i>
+            STORE LOCATION
+        </h2>
+    </div>
+
+    </div>
+    </div>
+        </div>
+            </div>
+                </div>
+                </div>
+    </section>
+
+
+    <!-- Map Section -->
+            <section class="map py-5">
+                <div class="container">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d390122.7264846962!2d104.80224697720196!3d11.556373781010378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951b42f8f154f%3A0xd96a3b813aef01f9!2sPhnom%20Penh%2C%20Cambodia!5e0!3m2!1sen!2s!4v1644346128234!5m2!1sen!2s"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+    </body>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        /// bag shopping
+        const bagIcon = document.querySelector('.icon-bag');
+        const shoppingPanel = document.querySelector('.shopping-bag-panel');
+        const closePanel = document.querySelector('.close-panel');
+        const overlay = document.querySelector('.overlay');
+
+        //// login
+
+        // Open panel when bag icon is clicked
+        bagIcon.addEventListener('click', function () {
+        shoppingPanel.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        });
+
+        // Close panel when X button is clicked
+        closePanel.addEventListener('click', function () {
+        shoppingPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        });
+
+        // Close panel when clicking outside
+        overlay.addEventListener('click', function () {
+        shoppingPanel.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        });
+
+        /// Open panel when clicked Login
+        const popup = document.getElementById('popupBox');
+
+        const loginLink = document.getElementById('Login');
+        const registerLink = document.getElementById('Register');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        // Show Login
+        loginLink.addEventListener('click', e => {
+        e.preventDefault();
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+        popup.classList.add('active');
+        overlay.classList.add('active');
+        });
+
+        // Show Register
+        registerLink.addEventListener('click', e => {
+        e.preventDefault();
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+        popup.classList.add('active');
+        overlay.classList.add('active');
+        });
+
+        // Close popup
+        overlay.addEventListener('click', () => {
+        popup.classList.remove('active');
+        overlay.classList.remove('active');
+        });
+
+        // Toggle forms
+        document.getElementById('showRegister').addEventListener('click', () => {
+        loginForm.classList.add('hidden');
+        registerForm.classList.remove('hidden');
+        });
+        document.getElementById('showLogin').addEventListener('click', () => {
+        registerForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        });
+
+        // Login alert
+        document.getElementById('loginBtn').addEventListener('click', e => {
+        e.preventDefault();
+        alert(`Logged in as: ${document.getElementById('loginUser').value}`);
+        });
+
+        // Register alert
+        document.getElementById('registerBtn').addEventListener('click', e => {
+        e.preventDefault();
+        alert(`Registered as: ${document.getElementById('regUser').value}`);
+        });
+
+        // Scroll animation functionality
+        let lastScrollTop = 0;
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+            rect.bottom >= 0
+        );
+        }
+
+        // Function to handle scroll animation
+        function handleScrollAnimation() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Check scroll direction
+        const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+        lastScrollTop = scrollTop;
+
+        // Animate elements based on scroll position
+        animatedElements.forEach(element => {
+            if (isInViewport(element)) {
+            element.classList.add('visible');
+            } else if (scrollDirection === 'up') {
+            // Optionally remove the visible class when scrolling up past elements
+            // element.classList.remove('visible');
+            }
+        });
+        }
+
+        // Initial check on page load
+        handleScrollAnimation();
+
+        // Listen for scroll events with throttling
+        let scrolling = false;
+        window.addEventListener('scroll', () => {
+        if (!scrolling) {
+            scrolling = true;
+            requestAnimationFrame(() => {
+            handleScrollAnimation();
+            scrolling = false;
+            });
+        }
+        });
+
+        // Additional check when resizing the window
+        window.addEventListener('resize', handleScrollAnimation);
+
+
+    });
+
+    </script>
+
+
+    <!---boostrap link java-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    </html>

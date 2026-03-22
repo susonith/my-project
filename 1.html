@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Lab - Encryption & Decryption Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="youtube.css">
+    <style>
+        @font-face {
+            font-family: 'sticker';
+            src: url(fonts/sticknote.otf);
+        }
+        .sidebar-link {
+            @apply flex items-center px-4 py-2 text-gray-400 transition-colors duration-300 transform rounded-lg hover:bg-gray-800 hover:text-white;
+        }
+        #rsa-encrypt-result {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+        .crypto-card {
+            @apply bg-gray-900 border border-gray-800 p-8 rounded-3xl shadow-xl mb-10;
+        }
+        .step-box {
+            @apply bg-gray-800 p-4 rounded-xl border border-gray-700 mb-4;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-gray-200 antialiased font-sans">
+
+    <aside class="fixed inset-y-0 left-0 z-50 w-72 overflow-y-auto bg-gray-900 border-r border-gray-800 hidden lg:block">
+        <div class="flex flex-col h-full px-6 py-8">
+            <div class="flex items-center gap-3 mb-10">
+                <img src="img/rupp.png" class="w-10 h-auto">
+                <span class="text-xl font-black tracking-tight text-white">CRYPTO<span class="text-blue-600">LAB</span></span>
+            </div>
+
+            <nav class="flex-1 space-y-2">
+                <p class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-widest">Introduction</p>
+                <a href="#cover" class="sidebar-link">Project DM</a>
+                <p class="px-4 pt-6 text-xs font-semibold text-gray-500 uppercase tracking-widest">Methods</p>
+                <a href="#content-1" class="sidebar-link">I. Classical Cryptography</a>
+                <div class="ml-6 space-y-1">
+                    <a href="#content-1-1" class="block px-4 py-1.5 text-sm text-gray-500 hover:text-blue-400">1.1 Caesar Cipher</a>
+                    <a href="#content-1-2" class="block px-4 py-1.5 text-sm text-gray-500 hover:text-blue-400">1.2 General Shift</a>
+                    <a href="#content-1-3" class="block px-4 py-1.5 text-sm text-gray-500 hover:text-blue-400">1.3 Affine Cipher</a>
+                    <a href="#content-1-4" class="block px-4 py-1.5 text-sm text-gray-500 hover:text-blue-400">1.4 Transposition</a>
+                </div>
+
+                <a href="#content-2" class="sidebar-link mt-4">II. RSA Cryptography</a><br>
+                <a href="#content-3" class="sidebar-link mt-2">III. Miscellaneous</a>
+            </nav>
+            <aside class="lg:w-60 justify-between flex-shrink-0 mb-8 -rotate-3">
+                <div class="sticky top-5 space-y-6">
+                    <div class="bg-yellow-100 p-6 rounded-lg shadow-md transform -rotate-1 relative overflow-hidden" style="font-family: 'sticker';">
+                        <img src="img/pin.png" class="absolute top-2 left-2 w-8 opacity-80"/>
+                        <h3 class="text-xl text-yellow-800 mb-2 mt-4 text-center">Summary</h3>
+                        <p class="text-yellow-900 leading-snug">
+                            This demonstration presents applications of number theory, including classical encryption-decryption methods and the RSA algorithm.
+                        </p>
+                        <p class="text-xs text-yellow-700 mt-4 text-right italic">April 22, 2025</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </aside>
+
+    <main class="lg:ml-72 min-h-screen">
+
+        <section id="cover" class="min-h-screen flex items-center justify-center p-8 bg-slate-950">
+            <div class="max-w-3xl w-full bg-gray-900 p-12 shadow-2xl rounded-3xl border border-gray-800 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+                <img src="img/rupp.png" class="w-24 mx-auto mb-8">
+                <h1 class="text-3xl font-black text-white mb-4 tracking-tight">ENCRYPTION AND DECRYPTION DEMO</h1>
+
+                <div class="grid md:grid-cols-2 gap-8 text-left border-t border-gray-800 pt-10 mt-10">
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs uppercase font-bold text-blue-500 mb-1">Submitted to</p>
+                            <p class="text-xl font-bold text-white uppercase">Mr. LIM Seyha</p>
+                            <p class="text-sm text-gray-400">Mathematic Lecturer, RUPP</p>
+                        </div>
+                    </div>
+                    <div class="md:text-right space-y-4">
+                        <div>
+                            <p class="text-xs uppercase font-bold text-blue-500 mb-1">Developed by</p>
+                            <p class="text-xl font-bold text-white uppercase">Mr. UNG Sereysopea</p>
+                            <p class="font-mono text-sm text-gray-500">ID: 000064199</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 p-6 bg-gray-800/50 rounded-2xl border border-gray-700 text-left">
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        This demonstration presents applications of number theory, including classical encryption-decryption methods and the RSA algorithm. In this report, I will describe the algorithm I developed and the work I have conducted.
+                    </p>
+                </div>
+                <p class="mt-10 font-mono text-xs text-gray-600 uppercase tracking-[0.3em]">April 22, 2025</p>
+            </div>
+        </section>
+
+        <div class="p-6 lg:p-16 max-w-5xl mx-auto">
+
+            <div id="content-1" class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-4xl font-black text-white uppercase tracking-tighter">I. Classical Cryptography</h2>
+                    <div class="h-1 flex-1 bg-gray-800"></div>
+                </div>
+
+                <section id="content-1-1" class="crypto-card">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-blue-900/50 text-blue-400 flex items-center justify-center rounded-xl text-lg font-black border border-blue-800/50">1.1</span>
+                        Caesar Cipher
+                    </h3>
+
+                    <div class="prose max-w-none text-gray-300 leading-relaxed italic mb-8 bg-slate-800/50 p-6 rounded-2xl border-l-4 border-blue-600">
+                        "One of the earliest and most well-known forms of cryptography was developed by Emperor Julius Caesar. During times of war, he needed a way to send secret messages to his generals. His solution was simple but effective: shift each letter in the alphabet by three positions. For example, the letter A becomes D, B becomes E, and so on. This technique came to be known as the Caesar Cipher."
+                        <p class="not-italic text-xs font-bold mt-4 text-gray-500 uppercase tracking-widest">Source: <a href="https://caesarcipher.net/" class="text-blue-500 underline underline-offset-4">caesarcipher.net</a></p>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-4 mb-10 bg-gray-950 p-6 rounded-3xl border border-gray-800">
+                        <img src="img/caesar-cipher-wheel.webp" class="max-w-xs hover:scale-105 transition-transform duration-500">
+                        <p class="text-sm text-gray-500 italic">Image: Caesar Cipher Wheel | Source: caesarcipher.net</p>
+                    </div>
+
+                    <div class="prose prose-invert max-w-none space-y-8 mt-6">
+                        <p class="text-slate-300 leading-loose">&emsp;&emsp;Emperor Julius Caesar made his messages secret by shifting each letter three positions forward in the alphabet. The algorithm to encrypt a message works like this:</p>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
+                                <p class="text-blue-400 font-bold mb-3 uppercase text-xs tracking-widest">Step 1. Assign numbers to each letter:</p>
+                                <p class="font-mono text-xs leading-7 text-slate-400 bg-black/30 p-4 rounded-xl">
+                                    A → 00, B → 01, C → 02, D → 03, E → 04, F → 05, G → 06, H → 07, I → 08, J → 09, K → 10, L → 11, M → 12, N → 13, O → 14, P → 15, Q → 16, R → 17, S → 18, T → 19, U → 20, V → 21, W → 22, X → 23, Y → 24, Z → 25
+                                </p>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
+                                <p class="text-blue-400 font-bold mb-3 uppercase text-xs tracking-widest">Step 2. Convert the plaintext into numbers:</p>
+                                <p class="text-slate-300">For example, if the plaintext is <code class="bg-blue-500/20 text-blue-300 px-2 rounded">UNGSEREYSOPEA</code>, we convert each letter to its corresponding number:</p>
+                                <div class="mt-3 font-mono text-xl text-yellow-500 font-bold tracking-tighter">
+                                    UNGSEREYSOPEA → 20 13 06 18 04 17 04 24 18 14 15 04 00
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
+                                <p class="text-blue-400 font-bold mb-3 uppercase text-xs tracking-widest">Step 3. Encrypt by adding 3:</p>
+                                <div class="font-mono text-slate-400 text-sm space-y-1">
+                                    <p>20 13 06 18 04 17 04 24 18 14 15 04 00 →</p>
+                                    <p>(20+3) (13+3) (06+3) (18+3) (04+3) (17+3) (04+3) (24+3) (18+3) (14+3) (15+3) (04+3) (00+3) →</p>
+                                    <p class="text-white font-bold text-lg">23 16 09 21 07 20 07 27 21 17 18 07 03</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
+                                <p class="text-blue-400 font-bold mb-3 uppercase text-xs tracking-widest">Step 4. Take result modulo 26:</p>
+                                <div class="font-mono text-slate-400 text-xs overflow-x-auto whitespace-nowrap pb-2">
+                                    23(mod 26) 16(mod 26) 09(mod 26) 21(mod 26) 07(mod 26) 20(mod 26) 07(mod 26) 27(mod 26) 21(mod 26) 17(mod 26) 18(mod 26) 07(mod 26) 03(mod 26) →
+                                </div>
+                                <p class="text-white font-bold text-lg mt-2 font-mono">23 16 09 21 07 20 07 01 21 17 18 07 03</p>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
+                                <p class="text-blue-400 font-bold mb-3 uppercase text-xs tracking-widest">Step 5. Convert back to letters:</p>
+                                <p class="text-3xl font-black text-yellow-500 tracking-widest">XQJVHUHBVRSHD</p>
+                            </div>
+                        </div>
+
+                    <div class="bg-blue-600/10 p-6 rounded-2xl border-2 border-blue-500/20 mt-10">
+                            <p class="text-slate-300">So, the ciphertext of the message <code>UNGSEREYSOPEA</code> using Caesar cipher with shift <code>k = 3</code> is:</p>
+                            <p class="text-xl font-bold mt-2">E<sub>k=3</sub> (UNGSEREYSOPEA) = <span class="text-yellow-400 underline decoration-dotted">XQJVHUHBVRSHD</span></p>
+                            <p class="mt-4 text-sm text-slate-400 italic">To decrypt the message, we simply reverse the process by subtracting 3 from each number and taking modulo 26 again.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <h4 class="text-xl font-bold mb-6 text-white border-b border-gray-700 pb-2">Caesar Cipher Demo</h4>
+                        <div class="space-y-4 max-w-xl mx-auto text-center">
+                            <label class="text-sm font-medium text-gray-400 block">Enter Plain text or Cipher text:</label>
+                            <input type="text" id="caesar-input" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Ex: SURRENDER NOW"/>
+                            <div class="flex gap-3 justify-center">
+                                <button id="caesar-encrypt-btn" class="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold transition-all cursor-pointer">Encrypt</button>
+                                <button id="caesar-decrypt-btn" class="px-8 py-3 bg-red-600 hover:bg-red-500 rounded-xl font-bold transition-all cursor-pointer">Decrypt</button>
+                            </div>
+                            <div class="mt-6 p-6 bg-gray-950 rounded-xl border border-dashed border-gray-700">
+                                <p class="text-xs font-bold text-gray-500 uppercase mb-2">Live Result</p>
+                                <div id="caesar-result" class="text-2xl font-mono font-black text-yellow-500 break-all">No Result</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="content-1-2" class="crypto-card">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6">I.II. General Shift Cipher</h3>
+                    <p class="text-gray-400 mb-8 italic">"The General Shift Cipher allows for any integer value as the shift, making it more versatile and secure than a fixed-shift Caesar cipher."</p>
+                    <div class="space-y-4 max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <input type="text" id="shift-input" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="Ex: NO MERCY"/>
+                        <div class="flex items-center gap-4">
+                            <label class="text-sm text-gray-400 whitespace-nowrap">Shift Key:</label>
+                            <input type="number" id="shift-key" class="w-24 bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="NUM"/>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="shift-encrypt-btn" class="bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-500 cursor-pointer">Encrypt</button>
+                            <button id="shift-decrypt-btn" class="bg-red-600 py-3 rounded-xl font-bold hover:bg-red-500 cursor-pointer">Decrypt</button>
+                            <button id="shift-brute-force-btn" class="col-span-2 bg-green-600 py-3 rounded-xl font-bold hover:bg-green-500 cursor-pointer">Brute Force Attack</button>
+                        </div>
+                        <div id="shift-result" class="mt-4 p-4 bg-gray-950 border border-gray-700 rounded-xl text-center font-mono font-bold text-yellow-500">No Result</div>
+                    </div>
+                </section>
+
+                <section id="content-1-3" class="crypto-card">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6">I.III. Affine Cipher</h3>
+                    <p class="text-gray-400 mb-8 italic">"Uses two keys: shift and multiplication. Formula: E(x) = (ax + b) mod 26."</p>
+                    <div class="space-y-4 max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <input type="text" id="affine-input" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="Ex: UNGSEREYSOPEA"/>
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="number" id="affine-key-a" class="bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="Key a"/>
+                            <input type="number" id="affine-key-b" class="bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="Key b"/>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="affine-encrypt-btn" class="bg-blue-600 py-3 rounded-xl font-bold cursor-pointer">Encrypt</button>
+                            <button id="affine-decrypt-btn" class="bg-red-600 py-3 rounded-xl font-bold cursor-pointer">Decrypt</button>
+                            <button id="affine-brute-force-btn" class="col-span-2 bg-green-600 py-3 rounded-xl font-bold cursor-pointer">Brute Force Attack</button>
+                        </div>
+                        <div id="affine-result" class="mt-4 p-4 bg-gray-950 border border-gray-700 rounded-xl text-center font-mono font-bold text-yellow-500">No Result</div>
+                    </div>
+                </section>
+
+                <section id="content-1-4" class="crypto-card">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6">I.IV. Transposition Cipher</h3>
+                    <p class="text-gray-400 mb-6 italic">"Rearranges the positions of the characters according to a specific system, creating a ciphertext that hides the original message."</p>
+                    <div class="rounded-2xl overflow-hidden border border-gray-700 mb-8 aspect-video">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/bcyUJK1BvHw?autoplay=1&rel=0&iv_load_policy=3&color=white&playlist=bcyUJK1BvHw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="space-y-4 max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                        <input type="text" id="transposition-input" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="Enter text..."/>
+                        <input type="text" id="transposition-key" class="w-full bg-gray-950 border border-gray-700 rounded-xl px-4 py-3 text-white" placeholder="Key (e.g. 4312)"/>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="transposition-encrypt-btn" class="bg-blue-600 py-3 rounded-xl font-bold cursor-pointer">Encrypt</button>
+                            <button id="transposition-decrypt-btn" class="bg-red-600 py-3 rounded-xl font-bold cursor-pointer">Decrypt</button>
+                        </div>
+                        <div id="transposition-result" class="mt-4 p-4 bg-gray-950 border border-gray-700 rounded-xl text-center font-mono font-bold text-yellow-500 break-all">No Result</div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="content-2" class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-4xl font-black text-white uppercase tracking-tighter">II. RSA Cryptography</h2>
+                    <div class="h-1 flex-1 bg-gray-800"></div>
+                </div>
+
+                <section class="crypto-card border-t-4 border-indigo-600">
+                    <h3 class="text-xl font-bold text-indigo-400 mb-6">II.I. RSA Algorithm</h3>
+                    <p class="italic text-gray-400 bg-indigo-900/10 p-6 rounded-xl border border-indigo-900/30 mb-10">
+                        &emsp;&emsp;"RSA (Rivest-Shamir-Adleman) is a widely used asymmetric encryption algorithm that relies on the mathematical properties of prime numbers. It was invented in 1977 by Ron Rivest, Adi Shamir, and Leonard Adleman. RSA is based on the difficulty of factoring large composite numbers into their prime factors."
+                    </p>
+
+                    <div class="space-y-12">
+                        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                            <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2">II.I.I RSA Keygen Demo</h4>
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <input type="number" id="rsa-keygen-p" class="bg-gray-950 border border-gray-700 rounded-xl p-3 text-white" placeholder="Prime p (e.g. 61)"/>
+                                <input type="number" id="rsa-keygen-q" class="bg-gray-950 border border-gray-700 rounded-xl p-3 text-white" placeholder="Prime q (e.g. 53)"/>
+                            </div>
+                            <button id="rsa-keygen-btn" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-500 cursor-pointer">Generate Key</button>
+                            <div id="rsa-keygen-result" class="mt-4 p-4 bg-gray-950 border border-gray-700 rounded-xl text-center font-mono text-indigo-300 min-h-[50px] flex items-center justify-center">No Result</div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 space-y-4">
+                                <h4 class="font-bold border-b border-gray-700 pb-2">II.I.II RSA Encryption</h4>
+                                <input type="text" id="rsa-encrypt-input" class="w-full bg-gray-950 border border-gray-700 rounded-lg p-3 text-white text-sm" placeholder="Plaintext"/>
+                                <input type="number" id="rsa-encrypt-key-e" class="w-full bg-gray-950 border border-gray-700 rounded-lg p-3 text-white text-sm" placeholder="Public key (e)"/>
+                                <input type="number" id="rsa-encrypt-key-n" class="w-full bg-gray-950 border border-gray-700 rounded-lg p-3 text-white text-sm" placeholder="Modulus (n)"/>
+                                <button id="rsa-encrypt-btn" class="w-full bg-blue-600 text-white font-bold py-3 rounded-xl cursor-pointer">Encrypt</button>
+                                <div id="rsa-encrypt-result" class="p-4 bg-gray-950 border border-gray-700 rounded-lg text-xs font-mono text-blue-400 min-h-[60px]">No Result</div>
+                            </div>
+
+                            <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 space-y-4">
+                                <h4 class="font-bold border-b border-gray-700 pb-2 text-red-400">II.I.III RSA Decryption</h4>
+                                <input type="text" id="rsa-decrypt-input" class="w-full bg-gray-950 border border-gray-700 rounded-lg p-3 text-white text-sm" placeholder="Ciphertext"/>
+                                <input type="number" id="rsa-decrypt-key-d" class="w-full bg-gray-950 border border-gray-700 rounded-lg p-3 text-white text-sm" placeholder="Private key (d)"/>
+                                <input type="number" id="rsa-decrypt-key-n" class="w-full bg-gray-950 border border-gray-700 rounded-lg p-3 text-white text-sm" placeholder="Modulus (n)"/>
+                                <button id="rsa-decrypt-btn" class="w-full bg-red-600 text-white font-bold py-3 rounded-xl cursor-pointer">Decrypt</button>
+                                <div id="rsa-decrypt-result" class="p-4 bg-gray-950 border border-gray-700 rounded-lg text-xs font-mono text-red-400 min-h-[60px]">No Result</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section id="content-3" class="crypto-card border-t-4 border-green-600">
+                <h2 class="text-2xl font-black text-white mb-6 uppercase tracking-widest">III. Miscellaneous</h2>
+                <div class="flex items-center gap-6 bg-gray-800/50 p-6 rounded-2xl border border-gray-800">
+                    <div class="bg-white p-2 rounded-xl">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="w-12 h-12">
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-500 uppercase mb-1">Source Code Repository</p>
+                        <a href="https://github.com/Sereysopea-Ung/ite-year-2-cipher.git" class="text-blue-400 hover:underline font-mono break-all text-sm transition-all">
+                            https://github.com/Sereysopea-Ung/ite-year-2-cipher.git
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="mt-20 text-center text-gray-600 text-[10px] uppercase tracking-[0.5em] pb-10">
+                &copy; 2025 Royal University of Phnom Penh - IT Engineering
+            </footer>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+    <script type="module" src="interaction.js"></script>
+    <script type="module" src="affine-interaction.js"></script>
+    <script type="module" src="transposition-interaction.js"></script>
+    <script type="module" src="rsa-keygen.js"></script>
+    <script type="module" src="rsa-encrypt-decrypt-interaction.js"></script>
+</body>
+</html>
